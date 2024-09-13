@@ -1,6 +1,6 @@
 # Discord Spam Bot
 
-This is a simple Python script that you can use to annoy your friends on Discord
+This is a Python script that you can use to annoy your friends on Discord
 
 ## Installation
 
