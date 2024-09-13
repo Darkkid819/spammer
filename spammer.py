@@ -2,6 +2,7 @@ import pyautogui
 import time
 import argparse
 import os
+import pyperclip
 
 parser = argparse.ArgumentParser(description="Spam messages using pyautogui")
 parser.add_argument("-m", "--message", type=str, help="Message to spam")
@@ -15,7 +16,7 @@ if args.file:
         print(f"File {args.file} does not exist.")
         exit()
     with open(args.file, "r") as f:
-        spam_message = f.read().strip()
+        spam_message = f.read()  
 elif args.message:
     spam_message = args.message
 else:
@@ -23,10 +24,10 @@ else:
     exit()
 
 print("Switch to your Discord chat window...")
-time.sleep(5) 
+time.sleep(5)  
 
 for _ in range(args.count):
-    pyautogui.typewrite(spam_message)  
+    pyperclip.copy(spam_message)  
+    pyautogui.hotkey("ctrl", "v")
     pyautogui.press("enter")  
     time.sleep(args.delay)  
-
