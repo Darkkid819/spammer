@@ -24,5 +24,5 @@ pip install -r requirements.txt
 1. **Spamming a message from a file**:
 
 ```bash
-python spam.py -f /path/to/message.txt -c 5 -d 5.0
+python spammer.py -f /path/to/message.txt -c 5 -d 5.0
 ```
